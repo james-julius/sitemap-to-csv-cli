@@ -1,0 +1,17 @@
+{
+  "name": "sitemap-to-csv",
+  "version": "1.0.0",
+  "description": "writes a simple csv file from a sitemapper powered by sitemappers",
+  "main": "sitemap-parser.js",
+  "dependencies": {
+    "convert-array-to-csv": "^2.0.0",
+    "csv-stringify": "^5.5.3",
+    "sitemapper": "^3.1.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
