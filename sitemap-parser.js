@@ -20,7 +20,7 @@ sitemapper.timeout = 5000;
 
 
 sitemapper
-  .fetch("https://www.allrecipes.com/sitemaps/recipe/1/sitemap.xml")
+  .fetch("https://sunbasket.com/sitemap.xml")
   // Needs to be in array format for the stringify function to work
   .then(({ url, sites }) => {
     for (let n = 0; n < sites.length; n++) {
@@ -28,15 +28,20 @@ sitemapper
       sites[n] = [sites[n]];
     }
     stringify(sites, (err, output) => {
-      fs.writeFile("allrecipes-sitemap-1.csv", output, "utf8", (err) => {
-        if (err) {
-          console.log(
-            "Some error occured - file either not saved or corrupted file saved."
-          );
-        } else {
-          console.log("It's saved!");
+      fs.writeFile(
+        "sunbasket-sitemap.csv",
+        output,
+        "utf8",
+        (err) => {
+          if (err) {
+            console.log(
+              "Some error occured - file either not saved or corrupted file saved."
+            );
+          } else {
+            console.log("It's saved!");
+          }
         }
-      });
+      );
     });
     console.log(`url:${url}`);
   })
